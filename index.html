@@ -2,96 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Tasmin Karim — CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tasmin Karim — Academic CV</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    :root{
+      --ink:#111111;
+      --muted:#4b5563;
+      --rule:#d1d5db;
+      /* PDF accent (maroon/dark red) */
+      --accent:#7a0000;  /* matches your PDF heading feel */ /* :contentReference[oaicite:2]{index=2} */
+      --link:#1a0dab;
+    }
+
+    html,body{
+      margin:0;padding:0;background:#fff;color:var(--ink);
+      font:15px/1.55 "Times New Roman", Times, serif;
+    }
+
+    .page{max-width:900px;margin:24px auto;padding:28px}
+    h1{font-size:34px;margin:0 0 6px;color:var(--ink);font-weight:800;text-align:center}
+    .sub{color:var(--muted);margin:0 0 12px;text-align:center}
+
+    hr{border:0;border-top:2px solid var(--rule);margin:18px 0}
+
+    h2{
+      font-size:22px;
+      color:var(--ink);
+      margin:18px 0 10px;
+      font-weight:800;
+    }
+
+    /* red job/degree title like PDF */
+    h3{
+      font-size:17px;
+      margin:0 0 4px;
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .meta{
+      color:var(--ink);
+      font-size:14px;
+      margin:0 0 6px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      font-weight:600;
+    }
+    .meta .org{font-style:italic;font-weight:700}
+    .meta .date{white-space:nowrap}
+
+    .section{break-inside:avoid;margin-bottom:14px}
+
+    ul{margin:6px 0 0 0;padding:0}
+    ul li{list-style:disc;margin:6px 0 0 20px}
+
+    /* Header contacts (stacked like PDF) */
+    .stack{display:flex;flex-direction:column;gap:2px;align-items:center}
+    .stack a{color:var(--link);text-decoration:underline}
+
+    /* Logo bar like your PDF (icons row) */
+    .logobar{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin:10px 0 6px;
+      flex-wrap:wrap;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border:1px solid #d1d5db;
+      border-radius:8px;
+      background:#fff;
+      text-decoration:none;
+      color:var(--ink);
+      box-shadow:0 2px 10px rgba(0,0,0,.06);
+    }
+    .badge:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.10)}
+    .badge span{font-weight:700;font-size:14px}
+
+    .ico{width:18px;height:18px;display:inline-block}
+
+    /* Individual brand-ish colors (like PDF icon row feel) */
+    .scholar span{color:#1a73e8}
+    .linkedin span{color:#0a66c2}
+    .rg span{color:#00ccbb}
+    .gmail span{color:#111}
+
+    .small{font-size:14px;color:var(--ink);text-align:center}
+
+    /* Section underline like PDF */
+    .sec-rule{
+      height:2px;background:#7b7b7b;margin:6px 0 14px;
+    }
+  </style>
 </head>
 
 <body>
-  <main class="page" aria-label="Academic CV">
+  <main class="page">
 
-    <!-- Header -->
-    <header class="header">
-      <h1 class="name">Tasmin Karim</h1>
+    <!-- HEADER -->
+    <header>
+      <h1>Tasmin Karim</h1>
+      <div class="small">Current Address: Patrick Henry St., Auburn Hills, 48326, MI, USA.</div>
 
-      <div class="subhead">
-        <div class="line">
-          <span class="label">Current Address:</span>
-          <span class="value">Patrick Henry St., Auburn Hills, 48326, MI, USA</span>
-        </div>
+      <!-- ICON/LOGO ROW (logo-style, not plain text links) -->
+      <div class="logobar">
+        <a class="badge scholar" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+          <!-- simple cap icon -->
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#1a73e8" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 14L4.5 12.5V16c0 2.21 3.36 4 7.5 4s7.5-1.79 7.5-4v-3.5L12 17z"/>
+          </svg>
+          <span>Google Scholar</span>
+        </a>
 
-        <div class="contacts">
-          <a class="chip" href="tel:+12483430927">+1 (248) 343-0927</a>
-          <a class="chip" href="mailto:tasminkarim@oakland.edu">tasminkarim@oakland.edu</a>
-          <a class="chip" href="https://tasminkarim-19.github.io/tasminkarim.github.io/" target="_blank" rel="noreferrer">
-            https://tasminkarim-19.github.io/tasminkarim.github.io/
-          </a>
-        </div>
+        <a class="badge linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <!-- in icon -->
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#0a66c2" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 23.5h4V7.98h-4V23.5ZM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v9.36h-4v-8.3c0-1.98-.04-4.52-2.76-4.52-2.76 0-3.18 2.15-3.18 4.37v8.45h-4V7.98Z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
 
-        <!-- Optional icon row (simple text links) -->
-        <div class="iconrow">
-          <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>
-          <span class="sep">|</span>
-          <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          <span class="sep">|</span>
-          <a href="#" target="_blank" rel="noreferrer">ResearchGate</a>
-          <span class="sep">|</span>
-          <a href="mailto:tasminkarim@oakland.edu">Gmail</a>
-        </div>
+        <a class="badge rg" href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer" title="ResearchGate">
+          <!-- RG icon -->
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#00ccbb" d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm3.2 6.2c-1.5 0-2.55.78-3.05 1.46V8.5H9.9V16h2.25v-3.9c0-1.65.75-2.6 2.1-2.6 1.1 0 1.85.7 1.85 2.25V16h2.25v-4.55c0-2.05-1.05-3.25-3.15-3.25Z"/>
+          </svg>
+          <span>ResearchGate</span>
+        </a>
+
+        <a class="badge gmail" href="mailto:tasminkarim@oakland.edu" title="Gmail">
+          <!-- envelope -->
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#ea4335" d="M2 6.5 12 13l10-6.5V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6.5Z"/>
+            <path fill="#34a853" d="M2 6.5 12 13l10-6.5L12 5 2 6.5Z"/>
+            <path fill="#4285f4" d="M2 6.5V18a2 2 0 0 0 2 2h3V10.2L2 6.5Z"/>
+            <path fill="#fbbc05" d="M22 6.5V18a2 2 0 0 1-2 2h-3V10.2l5-3.7Z"/>
+          </svg>
+          <span>Gmail</span>
+        </a>
+      </div>
+
+      <!-- Contacts stacked (like PDF) -->
+      <div class="stack">
+        <div>+1 (248) 343-0927</div>
+        <div><a href="mailto:tasminkarim@oakland.edu">tasminkarim@oakland.edu</a></div>
+        <div><a href="https://tasminkarim-19.github.io/tasminkarim.github.io/" target="_blank" rel="noopener noreferrer">
+          https://tasminkarim-19.github.io/tasminkarim.github.io/
+        </a></div>
       </div>
     </header>
 
-    <!-- Education -->
+    <hr/>
+
+    <!-- WORK EXPERIENCE -->
     <section class="section">
-      <div class="section-title">Education</div>
-      <div class="rule"></div>
+      <h2>Work Experience</h2>
+      <div class="sec-rule"></div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-left">
-            <div class="entry-role">PhD in Computer Science &amp; Engineering</div>
-            <div class="entry-org">Oakland University</div>
-          </div>
-          <div class="entry-right">Jan 2025 - Dec 2029 (Expected)</div>
-        </div>
-
-        <ul class="bullets">
-          <li>Cgpa : 4.00 / 4.00 (after 2nd Semester; 3rd Semester ongoing)</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-left">
-            <div class="entry-role">Bachelor of Science in Computer Science &amp; Engineering</div>
-            <div class="entry-org">Daffodil International University</div>
-          </div>
-          <div class="entry-right">Sept 2019 - Feb 2024</div>
-        </div>
-
-        <ul class="bullets">
-          <li>Cgpa : 3.98/4.00</li>
-          <li>Thesis on “ANNprob-ACPs: A novel anticancer peptide identifier based on probabilistic feature fusion approach”.</li>
-          <li>Achieved 8th position among four batches of students.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Work Experience -->
-    <section class="section">
-      <div class="section-title">Work Experience</div>
-      <div class="rule"></div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-left">
-            <div class="entry-role">Graduate Research Assistant (GRA)</div>
-            <div class="entry-org">Oakland University</div>
-          </div>
-          <div class="entry-right">Jan 2025 -</div>
-        </div>
-
-        <ul class="bullets">
+      <div>
+        <h3>Graduate Research Assistant (GRA)</h3>
+        <p class="meta">
+          <span class="org">Oakland University</span>
+          <span class="date">Jan 2025 -</span>
+        </p>
+        <ul>
           <li>Developed and curated large-scale, multi-language datasets (Java, Python, and C/C++) for vulnerability research and benchmarking.</li>
           <li>Designed data preprocessing and feature extraction pipelines to improve code representation quality.</li>
           <li>Conducted extensive experiments on Large Language Models (LLMs) for software vulnerability detection and classification.</li>
@@ -99,180 +180,65 @@
         </ul>
       </div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-left">
-            <div class="entry-role">Graduate Teaching Assistant (GTA)</div>
-            <div class="entry-org">Oakland University, Department of Computer Science &amp; Engineering</div>
-          </div>
-          <div class="entry-right">Sept 2025 -</div>
-        </div>
-
-        <ul class="bullets">
-          <li>Course, Computer System (CSI-2440-45100, Fall 2025): Conducted class sessions and assisted students.</li>
+      <div style="margin-top:14px">
+        <h3>Graduate Teaching Assistant (GTA)</h3>
+        <p class="meta">
+          <span class="org">Oakland University, Department of Computer Science &amp; Engineering</span>
+          <span class="date">Sept 2025 -</span>
+        </p>
+        <ul>
+          <li>Course: Computer System (CSI-2440-45100, Fall 2025): Conducted class sessions and assisted students.</li>
           <li>Evaluated assignments, graded exams, and monitored student performance throughout the semester.</li>
           <li>Provided guidance during lab sessions and supported course management activities.</li>
         </ul>
       </div>
 
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-left">
-            <div class="entry-role">Research Assistant (RA)</div>
-            <div class="entry-org">Health Informatics Research Lab (HIRL) - Daffodil International University</div>
-          </div>
-          <div class="entry-right">Jan 2022 - Feb 2024</div>
-        </div>
-
-        <ul class="bullets">
+      <div style="margin-top:14px">
+        <h3>Research Assistant (RA)</h3>
+        <p class="meta">
+          <span class="org">Health Informatics Research Lab (HIRL) — Daffodil International University</span>
+          <span class="date">Jan 2022 - Feb 2024</span>
+        </p>
+        <ul>
           <li>Supervised and guided two undergraduate students in conducting research-oriented projects.</li>
           <li>Conducted ML and DL experiments for peptide identification in bioengineering.</li>
-          <li>Created a user-friendly web server for predicting anticancer peptides, utilizing ANVIL software. The web server is:
-            <a href="https://circular-palatable-term.anvil.app/" target="_blank" rel="noreferrer">https://circular-palatable-term.anvil.app/</a>
-          </li>
-          <li>Conducted SHAP-based feature engineering and developed the ANNprob-ACPs model for anticancer peptide identification, published in Computers in Biology and Medicine (CBIM), impact factor: 7.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <div class="entry-left">
-            <div class="entry-role">Lab Prefect (Undergraduate)</div>
-            <div class="entry-org">Daffodil International University, Department of CSE</div>
-          </div>
-          <div class="entry-right">May 2021 - April 2022</div>
-        </div>
-
-        <ul class="bullets">
-          <li>Course, Algorithms (CSE-215, Summer 2021, Fall 2021, Spring 2022) — Instructed and guided over 30 students in theoretical and practical aspects of algorithm design and implementation.</li>
-          <li>Mentored students in applying algorithms to solve computational problems effectively.</li>
-          <li>Reviewed students’ assignments and provided constructive feedback to improve coding efficiency and logic.</li>
-          <li>Conducted hands-on lab sessions to enhance understanding of algorithmic problem-solving.</li>
+          <li>Created a user-friendly web server for predicting anticancer peptides (ANVIL): https://circular-palatable-term.anvil.app/.</li>
+          <li>Conducted SHAP-based feature engineering and developed the ANNprob-ACPs model (CBIM).</li>
         </ul>
       </div>
     </section>
 
-    <!-- Publications -->
+    <!-- EDUCATION -->
     <section class="section">
-      <div class="section-title">PUBLICATIONS</div>
-      <div class="rule"></div>
+      <h2>Education</h2>
+      <div class="sec-rule"></div>
 
-      <div class="subsection-title">Published Papers</div>
-      <ol class="pubs">
-        <li>Akter, M.S., Sultan, M.F., Karim, T. and Shaon, M.S.H., 2025. ReVGG-R2Net: Optimized Recurrent Framework for Microscopic Blood Cell Segmentation. <em>Tissue and Cell</em>, p.103189.</li>
-        <li>Sultan, M.F., Karim, T., Shaon, M.S.H., Ali, M.M., Ibrahim, S.M., Akter, M.S., Ahmed, K., Bui, F.M. and Moni, M.A., 2025. BitterEN: A novel ensemble model for the identification of bitter peptide. <em>Computers in Biology and Medicine</em>, 195, p.110528.</li>
-        <li>Karim, T., Shaon, M.S.H., Ali, M.M., Ibrahim, S.M., Akter, M.S., Ahmed, K., Bui, F.M., Chen, L. and Moni, M.A., 2025. K-SNOpred: Identification of protein S-nitrosylation sites through word embedding features and machine learning. <em>Analytical Biochemistry</em>, p.115952.</li>
-        <li>Sultan, M.F., Karim, T., Shaon, M.S.H., Azim, S.M., Dehzangi, I., Akter, M.S., Ibrahim, S.M., Ali, M.M., Ahmed, K. and Bui, F.M., 2025. DHUpredET: A comparative computational approach for identification of dihydrouridine modification sites in RNA sequence. <em>Analytical Biochemistry</em>, 702, p.115828.</li>
-        <li>Karim, T., Shaon, M.S.H., Sultan, M.F., Cuzzocrea, A. and Akter, M.S., 2025. NULLDect: A Dynamic Adaptive Learning Framework for Robust NULL Pointer Dereference Detection, <em>SECRYPT 2025</em>.</li>
-        <li>Shaon, M.S.H., Sultan, F., Karim, T. and Akter, S., 2025. Anti-BioEn: An advanced framework for accurate bioactive agent classification based on hybrid models and graph feature encoding method. <em>BIO Web of Conferences</em> (Vol. 163, p. 01007). EDP Sciences.</li>
-        <li>Kaanan, E., Karim, T., Shaon, M.S.H., Sultan, M.F., Cuzzocrea, A. and Akter, M.S., 2024. LLM-Based Approach for Buffer Overflow Detection in Source Code. In <em>ICCIT 2024</em> (pp. 1898–1902). IEEE.</li>
-        <li>Shaon, M.S.H., Sultan, M.F., Karim, T., Alshan, M.S.H., Cuzzocrea, A. and Akter, M.S., 2024. NeuroBooster: A Robust Classifier for the Discovery of Neuropeptide Sequences based on Meta-learning Approach. In <em>IEEE Big Data 2024</em> (pp. 6132–6141). IEEE.</li>
-        <li>Shaon, M.S.H., Sultan, M.F., Karim, T., Cuzzocrea, A. and Akter, M.S., 2024. An Advanced Liver Disease Detection Tool with a Stacking-Ensemble-based Machine Learning Approach. In <em>IEEE Big Data 2024</em> (pp. 6123–6131). IEEE.</li>
-        <li>Shaon, M.S.H., Karim, T., Shakil, M.S. and Hasan, M.Z., 2024. A Comparative Study of Machine Learning Models with LASSO and SHAP Feature Selection for Breast Cancer Prediction. <em>Healthcare Analytics</em>, p.100353.</li>
-        <li>Shaon, M.S.H., Karim, T., Ali, M.M., Hasan, M.Z., Ahmed, K., Bui, F.M., Chen, L., and Moni, M.A., 2024. A Robust Deep Learning Approach for Identification of RNA 5-methyluridine Sites, <em>Scientific Reports</em>.</li>
-        <li>Sultan, M.F., Shaon, M.S.H., Karim, T., Ali, M.M., Hasan, M.Z., Ahmed, K., Bui, F.M., Chen, L., Dhasarathan, V. and Moni, M.A., 2024. MLAFP-XN: Leveraging Neural Network Model for Development of Antifungal Peptide Identification Tool. <em>Heliyon</em>.</li>
-        <li>Karim, T., Shaon, M.S.H., Ali, M.M., Ahmed, K., Bui, F.M. and Chen, L., 2024. StackAMP: Stacking-Based Ensemble Classifier for Antimicrobial Peptide Identification. <em>IEEE Transactions on Artificial Intelligence</em>, 1(01), pp.1-10.</li>
-        <li>Shaon, M.S.H., Karim, T., Sultan, M.F., Ali, M.M., Ahmed, K., Hasan, M.Z., Moustafa, A., Bui, F.M. and Al-Zahrani, F.A., 2024. AMP-RNNpro: a two-stage approach for identification of antimicrobials using probabilistic features. <em>Scientific Reports</em>, 14(1), p.12892.</li>
-        <li>Karim, T., Shaon, M.S.H., Sultan, M.F., Hasan, M.Z. and Kafy, A.A., 2024. ANNprob-ACPs: A novel anticancer peptide identifier based on probabilistic feature fusion approach. <em>Computers in Biology and Medicine</em>, 169, p.107915.</li>
-      </ol>
-
-      <div class="subsection-title">Submitted Papers</div>
-      <ul class="bullets">
-        <li>Karim, T., Akter, M. S., Cuzzocrea, A. <em>PyCode Vul: A Python Benchmark Dataset for Code-Level Vulnerability Detection and Analysis</em>. (pp. 12), IEEE Bigdata 2025.</li>
-        <li>Karim, T., Akter, M. S. <em>Vulnerability Datasets for Software Security: A Survey of Existing Resources, Challenges, and Future Directions</em>. Computers &amp; Security Journal, Elsevier.</li>
-        <li>Sultan, M. F., Karim, T., Shaon, M. S. H., Akter, M. S., Wardat, M., Cuzzocrea, A. <em>CodeGraphNet: Embedding-Driven Enhanced Vulnerability Detection with Line-Level Error Identification</em>. Software Quality Journal, Springer.</li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section class="section">
-      <div class="section-title">SKILLS</div>
-      <div class="rule"></div>
-
-      <ul class="bullets tight">
-        <li><span class="k">Programming &amp; Scripting:</span> Python, C/C++, R, Java (basic), Bash scripting.</li>
-        <li><span class="k">AI &amp; Machine Learning Ecosystem:</span> TensorFlow, PyTorch, Keras, Scikit-Learn, XGBoost, NumPy, Pandas, Matplotlib, Seaborn, Plotly, Biopython.</li>
-        <li><span class="k">Data &amp; Model Explainability:</span> SHAP, LIME, LASSO, PCA, feature attribution &amp; interpretability methods.</li>
-        <li><span class="k">Code Intelligence &amp; Static Analysis:</span> Joern, Semgrep, Cppcheck, Bandi, Clang for FOL/AST/PDG-based vulnerability and code structure analysis.</li>
-        <li><span class="k">Graph Representation &amp; Analysis:</span> NetworkX, Graphviz, Neo4j, CPG Analysis, SQLite, JSON schema validation, Regex-based function filtering.</li>
-        <li><span class="k">Research &amp; Model Development:</span> Fine-tuning and parameter-efficient learning (LoRA, PEFT), Chain-of-Thought (CoT) reasoning, Graph embeddings, Neuro-symbolic learning, LLM evaluation and prompt engineering.</li>
-        <li><span class="k">Data Science &amp; Workflow Tools:</span> Weka, Jupyter Notebook, Google Colab, PyCharm, GitHub, iLearnPlus.</li>
-        <li><span class="k">Academic &amp; Visualization Tools:</span> LaTeX, EndNote, Mendeley, Microsoft Office Suite, Canva, Lucidchart, Draw.io, QuillBot, Grammarly.</li>
-        <li><span class="k">Cloud &amp; Deployment Environment:</span> AWS, ANVIL, Docker, RESTful APIs, Localhost, HTML, CSS.</li>
-        <li><span class="k">Languages:</span> English (Professional proficiency), Bangla (Native), Hindi (Conversational).</li>
-        <li><span class="k">Professional Skills:</span> Research communication, academic writing, mentorship, teamwork, analytical reasoning, leadership, and project organization.</li>
-      </ul>
-    </section>
-
-    <!-- Research Interest -->
-    <section class="section">
-      <div class="section-title">RESEARCH INTEREST</div>
-      <div class="rule"></div>
-
-      <ul class="bullets">
-        <li>Machine learning, reason: ML helps systems to automatically learn and improve from data, driving innovation across industries.</li>
-        <li>NLP, reason: Bridges human communication and machines, enhancing understanding and interaction in real-world applications.</li>
-        <li>LLM, reason: Powers advanced language understanding and generation.</li>
-        <li>AI security, reason: Ensures the robustness and safety of AI systems.</li>
-        <li>Deep-learning, reason: Facilitates complex data pattern recognition, making it foundational for breakthroughs in AI research and applications.</li>
-        <li>Biotechnology, reason: Integrates computational models with biology, advancing healthcare, drug discovery, and personalized medicine.</li>
-      </ul>
-    </section>
-
-    <!-- Services -->
-    <section class="section">
-      <div class="section-title">SERVICES</div>
-      <div class="rule"></div>
-
-      <div class="subsection-title">Reviewer Experience</div>
-      <ul class="bullets">
-        <li>Scientific Research (Journal)</li>
-        <li>BMC Cancer (Journal)</li>
-        <li>BMC Medicine and Informatics (Journal)</li>
-        <li>Elsevier (Journal)</li>
-        <li>MDPI (Journal)</li>
-        <li>Springer Links (Journal)</li>
-        <li>IEEE BigData 2024 (Conference)</li>
-        <li>IEEE BigData 2025 (Conference)</li>
-      </ul>
-    </section>
-
-    <!-- References -->
-    <section class="section">
-      <div class="section-title">REFERENCES</div>
-      <div class="rule"></div>
-
-      <div class="ref">
-        <div class="ref-title">Reference 1</div>
-        <div>Abdulla Al Kafy</div>
-        <div>Doctoral Student</div>
-        <div>Dept. Geography and Environment</div>
-        <div>University of Texas at Austin</div>
-        <div>Email: <a href="mailto:abdullaalkafy@utexas.edu">abdullaalkafy@utexas.edu</a></div>
+      <div>
+        <h3>PhD in Computer Science &amp; Engineering</h3>
+        <p class="meta">
+          <span class="org">Oakland University</span>
+          <span class="date">Jan 2025 - Dec 2029 (Expected)</span>
+        </p>
+        <ul>
+          <li>Cgpa : 4.00 / 4.00 (after 2nd Semester; 3rd Semester ongoing)</li>
+        </ul>
       </div>
 
-      <div class="ref">
-        <div class="ref-title">Reference 2</div>
-        <div>Dr. Md Zahid Hasan</div>
-        <div>Associate Professor</div>
-        <div>Department of Computer Science &amp; Engineering</div>
-        <div>Daffodil Internatioanl University</div>
-        <div>Email: <a href="mailto:zahid.cse@diu.edu.bd">zahid.cse@diu.edu.bd</a></div>
+      <div style="margin-top:14px">
+        <h3>Bachelor of Science in Computer Science &amp; Engineering</h3>
+        <p class="meta">
+          <span class="org">Daffodil International University</span>
+          <span class="date">Sept 2019 - Feb 2024</span>
+        </p>
+        <ul>
+          <li>Cgpa : 3.98/4.00</li>
+          <li>Thesis on “ANNprob-ACPs: A novel anticancer peptide identifier based on probabilistic feature fusion approach”.</li>
+          <li>Achieved 8th position among four batches of students.</li>
+        </ul>
       </div>
     </section>
 
-    <footer class="footer">
-      <span>Last updated: <span id="lastUpdated"></span></span>
-    </footer>
-
+    <hr/>
   </main>
-
-  <script>
-    // Auto last updated (optional)
-    const d = new Date();
-    document.getElementById("lastUpdated").textContent =
-      d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "2-digit" });
-  </script>
 </body>
 </html>
-
