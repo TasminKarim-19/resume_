@@ -4,42 +4,26 @@
   <meta charset="utf-8" />
   <title>Tasmin Karim — CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <style>
     :root{
-      --ink:#111111;
+      --ink:#111;
       --muted:#4b5563;
       --rule:#d1d5db;
-      /* PDF accent (maroon/dark red) */
-      --accent:#7a0000;  /* matches your PDF heading feel */ /* :contentReference[oaicite:2]{index=2} */
+      --accent:#7a0000; /* PDF-like maroon */ /* :contentReference[oaicite:2]{index=2} */
       --link:#1a0dab;
     }
-
-    html,body{
-      margin:0;padding:0;background:#fff;color:var(--ink);
-      font:15px/1.55 "Times New Roman", Times, serif;
-    }
-
+    html,body{margin:0;padding:0;background:#fff;color:var(--ink);font:15px/1.55 "Times New Roman", Times, serif;}
     .page{max-width:900px;margin:24px auto;padding:28px}
-    h1{font-size:34px;margin:0 0 6px;color:var(--ink);font-weight:800;text-align:center}
-    .sub{color:var(--muted);margin:0 0 12px;text-align:center}
 
+    h1{font-size:34px;margin:0 0 6px;color:var(--ink);font-weight:800;text-align:center}
+    .small{font-size:14px;color:var(--ink);text-align:center}
     hr{border:0;border-top:2px solid var(--rule);margin:18px 0}
 
-    h2{
-      font-size:22px;
-      color:var(--ink);
-      margin:18px 0 10px;
-      font-weight:800;
-    }
+    h2{font-size:22px;color:var(--ink);margin:18px 0 10px;font-weight:800}
+    .sec-rule{height:2px;background:#7b7b7b;margin:6px 0 14px}
 
-    /* red job/degree title like PDF */
-    h3{
-      font-size:17px;
-      margin:0 0 4px;
-      color:var(--accent);
-      font-weight:800;
-    }
+    /* red title lines inside sections */
+    h3{font-size:17px;margin:0 0 4px;color:var(--accent);font-weight:800}
 
     .meta{
       color:var(--ink);
@@ -53,53 +37,40 @@
     .meta .org{font-style:italic;font-weight:700}
     .meta .date{white-space:nowrap}
 
-    .section{break-inside:avoid;margin-bottom:14px}
-
     ul{margin:6px 0 0 0;padding:0}
     ul li{list-style:disc;margin:6px 0 0 20px}
 
-    /* Header contacts (stacked like PDF) */
-    .stack{display:flex;flex-direction:column;gap:2px;align-items:center}
+    .stack{display:flex;flex-direction:column;gap:2px;align-items:center;margin-top:8px}
     .stack a{color:var(--link);text-decoration:underline}
 
-    /* Logo bar like your PDF (icons row) */
-    .logobar{
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      margin:10px 0 6px;
-      flex-wrap:wrap;
-    }
-
+    .logobar{display:flex;justify-content:center;gap:10px;margin:10px 0 6px;flex-wrap:wrap}
     .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:6px 10px;
-      border:1px solid #d1d5db;
-      border-radius:8px;
-      background:#fff;
-      text-decoration:none;
-      color:var(--ink);
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border:1px solid #d1d5db;border-radius:8px;background:#fff;
+      text-decoration:none;color:var(--ink);
       box-shadow:0 2px 10px rgba(0,0,0,.06);
+      transition:transform .08s ease, box-shadow .08s ease;
     }
     .badge:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.10)}
     .badge span{font-weight:700;font-size:14px}
-
     .ico{width:18px;height:18px;display:inline-block}
 
-    /* Individual brand-ish colors (like PDF icon row feel) */
     .scholar span{color:#1a73e8}
     .linkedin span{color:#0a66c2}
     .rg span{color:#00ccbb}
+    .orcid span{color:#111}
+    .github span{color:#111}
     .gmail span{color:#111}
 
-    .small{font-size:14px;color:var(--ink);text-align:center}
+    /* Publications formatting */
+    .pubs{margin:6px 0 0 0;padding:0}
+    .pubs li{list-style:decimal;margin:8px 0 0 22px}
+    .pubs em{font-style:italic}
+    .pubs b{font-weight:800}
 
-    /* Section underline like PDF */
-    .sec-rule{
-      height:2px;background:#7b7b7b;margin:6px 0 14px;
-    }
+    /* Reference lines */
+    .refline{margin:6px 0 0;color:var(--ink);font-size:14px}
+    .refline a{color:var(--link);text-decoration:underline}
   </style>
 </head>
 
@@ -111,34 +82,45 @@
       <h1>Tasmin Karim</h1>
       <div class="small">Current Address: Patrick Henry St., Auburn Hills, 48326, MI, USA.</div>
 
-      <!-- ICON/LOGO ROW (logo-style, not plain text links) -->
+      <!-- LOGO BADGES (replace links) -->
       <div class="logobar">
-        <a class="badge scholar" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" title="Google Scholar">
-          <!-- simple cap icon -->
+        <a class="badge scholar" href="#" target="_blank" rel="noopener noreferrer" title="Google Scholar">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="#1a73e8" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 14L4.5 12.5V16c0 2.21 3.36 4 7.5 4s7.5-1.79 7.5-4v-3.5L12 17z"/>
           </svg>
           <span>Google Scholar</span>
         </a>
 
-        <a class="badge linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-          <!-- in icon -->
+        <a class="badge linkedin" href="#" target="_blank" rel="noopener noreferrer" title="LinkedIn">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="#0a66c2" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 23.5h4V7.98h-4V23.5ZM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v9.36h-4v-8.3c0-1.98-.04-4.52-2.76-4.52-2.76 0-3.18 2.15-3.18 4.37v8.45h-4V7.98Z"/>
           </svg>
           <span>LinkedIn</span>
         </a>
 
-        <a class="badge rg" href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer" title="ResearchGate">
-          <!-- RG icon -->
+        <a class="badge rg" href="#" target="_blank" rel="noopener noreferrer" title="ResearchGate">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="#00ccbb" d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2Zm3.2 6.2c-1.5 0-2.55.78-3.05 1.46V8.5H9.9V16h2.25v-3.9c0-1.65.75-2.6 2.1-2.6 1.1 0 1.85.7 1.85 2.25V16h2.25v-4.55c0-2.05-1.05-3.25-3.15-3.25Z"/>
           </svg>
           <span>ResearchGate</span>
         </a>
 
+        <a class="badge orcid" href="#" target="_blank" rel="noopener noreferrer" title="ORCID">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="#a6ce39"></circle>
+            <path d="M7.2 7.3h1.7v9.4H7.2V7.3Zm3.1 0h3.2c3.1 0 4.7 1.8 4.7 4.7 0 2.9-1.6 4.7-4.7 4.7h-3.2V7.3Zm1.7 1.5v6.4h1.5c2 0 2.9-1 2.9-3.2 0-2.2-.9-3.2-2.9-3.2H12Z" fill="#fff"/>
+          </svg>
+          <span>ORCID</span>
+        </a>
+
+        <a class="badge github" href="#" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#111" d="M12 .5C5.73.5.75 5.7.75 12.1c0 5.15 3.3 9.52 7.88 11.06.58.11.79-.26.79-.57v-2.1c-3.2.71-3.87-1.3-3.87-1.3-.52-1.37-1.27-1.73-1.27-1.73-1.04-.72.08-.7.08-.7 1.15.08 1.75 1.22 1.75 1.22 1.02 1.8 2.67 1.28 3.32.98.1-.76.4-1.28.72-1.57-2.55-.3-5.24-1.31-5.24-5.85 0-1.29.45-2.34 1.18-3.17-.12-.3-.51-1.52.11-3.16 0 0 .97-.32 3.18 1.21a10.7 10.7 0 0 1 2.9-.4c.99 0 1.98.14 2.9.4 2.2-1.53 3.17-1.21 3.17-1.21.62 1.64.23 2.86.11 3.16.73.83 1.18 1.88 1.18 3.17 0 4.55-2.7 5.55-5.26 5.84.41.37.78 1.1.78 2.22v3.3c0 .32.21.69.79.57 4.58-1.54 7.88-5.91 7.88-11.06C23.25 5.7 18.27.5 12 .5Z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
         <a class="badge gmail" href="mailto:tasminkarim@oakland.edu" title="Gmail">
-          <!-- envelope -->
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="#ea4335" d="M2 6.5 12 13l10-6.5V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6.5Z"/>
             <path fill="#34a853" d="M2 6.5 12 13l10-6.5L12 5 2 6.5Z"/>
@@ -149,13 +131,10 @@
         </a>
       </div>
 
-      <!-- Contacts stacked (like PDF) -->
       <div class="stack">
         <div>+1 (248) 343-0927</div>
         <div><a href="mailto:tasminkarim@oakland.edu">tasminkarim@oakland.edu</a></div>
-        <div><a href="https://tasminkarim-19.github.io/tasminkarim.github.io/" target="_blank" rel="noopener noreferrer">
-          https://tasminkarim-19.github.io/tasminkarim.github.io/
-        </a></div>
+        <div><a href="#" target="_blank" rel="noopener noreferrer">Your Website</a></div>
       </div>
     </header>
 
@@ -187,7 +166,7 @@
           <span class="date">Sept 2025 -</span>
         </p>
         <ul>
-          <li>Course: Computer System (CSI-2440-45100, Fall 2025): Conducted class sessions and assisted students.</li>
+          <li>Course: Computer System (CSI-2440-45100, Fall 2025): conducted class sessions and assisted students.</li>
           <li>Evaluated assignments, graded exams, and monitored student performance throughout the semester.</li>
           <li>Provided guidance during lab sessions and supported course management activities.</li>
         </ul>
@@ -202,8 +181,8 @@
         <ul>
           <li>Supervised and guided two undergraduate students in conducting research-oriented projects.</li>
           <li>Conducted ML and DL experiments for peptide identification in bioengineering.</li>
-          <li>Created a user-friendly web server for predicting anticancer peptides (ANVIL): https://circular-palatable-term.anvil.app/.</li>
-          <li>Conducted SHAP-based feature engineering and developed the ANNprob-ACPs model (CBIM).</li>
+          <li>Created a user-friendly web server for predicting anticancer peptides using ANVIL.</li>
+          <li>Developed ANNprob-ACPs model and contributed to peer-reviewed publications.</li>
         </ul>
       </div>
     </section>
@@ -236,6 +215,79 @@
           <li>Achieved 8th position among four batches of students.</li>
         </ul>
       </div>
+    </section>
+
+    <!-- PUBLICATIONS (Published Papers) -->
+    <section class="section">
+      <h2>Publications — Published Papers</h2>
+      <div class="sec-rule"></div>
+
+      <ol class="pubs">
+        <li>Karim, T., Shaon, M.S.H., Shakil, M.S. and Hasan, M.Z., 2024. A Comparative Study of Machine Learning Models with LASSO and SHAP Feature Selection for Breast Cancer Prediction. <em><b>Healthcare Analytics</b></em>.</li>
+        <li>Karim, T., Shaon, M.S.H., Sultan, M.F., Hasan, M.Z. and Kafy, A.A., 2024. ANNprob-ACPs: A novel anticancer peptide identifier based on probabilistic feature fusion approach. <em><b>Computers in Biology and Medicine</b></em>.</li>
+        <li>Shaon, M.S.H., Karim, T., Sultan, M.F., et al., 2024. AMP-RNNpro: a two-stage approach for identification of antimicrobials using probabilistic features. <em><b>Scientific Reports</b></em>.</li>
+      </ol>
+    </section>
+
+    <!-- PUBLICATIONS (Submitted/Accepted) -->
+    <section class="section">
+      <h2>Publications — Submitted / Accepted</h2>
+      <div class="sec-rule"></div>
+
+      <ul>
+        <li><b>PyCode Vul</b>: A Python Benchmark Dataset for Code-Level Vulnerability Detection and Analysis (submitted).</li>
+        <li><b>Vulnerability Datasets for Software Security</b>: Survey paper (submitted).</li>
+        <li><b>CodeGraphNet</b>: Embedding-driven vulnerability detection with line-level identification (submitted).</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="sec-rule"></div>
+
+      <ul>
+        <li><b>Programming &amp; Scripting:</b> Python, C/C++, R, Java (basic), Bash scripting</li>
+        <li><b>Frameworks &amp; Libraries:</b> NumPy, Pandas, Scikit-Learn, Matplotlib, PyTorch, TensorFlow, Plotly, Biopython</li>
+        <li><b>Explainability:</b> SHAP, LIME, LASSO, PCA</li>
+        <li><b>Code/Security Tools:</b> Joern, Semgrep, CodeQL, Cppcheck, Bandit</li>
+        <li><b>Research Tools:</b> LaTeX, EndNote, Mendeley, MS Office, Canva, Lucidchart, Draw.io, Grammarly</li>
+        <li><b>Languages:</b> English (Professional), Bangla (Native), Hindi (Conversational)</li>
+      </ul>
+    </section>
+
+    <!-- AWARDS & CERTIFICATES -->
+    <section class="section">
+      <h2>Awards &amp; Certificates</h2>
+      <div class="sec-rule"></div>
+
+      <ul>
+        <li>Center for Excellence in Teaching and Learning — Oakland University — 2025</li>
+        <li>Participation in AI Celebration Project Showcase — Daffodil International University — 2024</li>
+        <li>Participation in 3rd ELC Economical Project Contest — Universitas Islam Sultan Agung — 2022</li>
+        <li>Completed Microsoft Azure Fundamentals courses — ICT Division — 2022</li>
+      </ul>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <h2>Services — Reviewer Experiences</h2>
+      <div class="sec-rule"></div>
+
+      <ul>
+        <li>SN Computers (SpringerLink) — Reviewer — Manuscript ID: SNCS-D-24-01671 — Review date: 30 Jul 2024</li>
+        <li>Expert Systems With Applications (Elsevier) — Reviewer — Manuscript ID: ESWA-D-24-12099 — Review date: 05 Sept 2024</li>
+        <li>IEEE BigData 2025 — Reviewer — Review date: 22 Oct 2025</li>
+      </ul>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="section">
+      <h2>References</h2>
+      <div class="sec-rule"></div>
+
+      <p class="refline"><b>Abdulla Al Kafy</b> — Doctoral Student — University of Texas at Austin — Email: <a href="mailto:abdullaalkafy@utexas.edu">abdullaalkafy@utexas.edu</a></p>
+      <p class="refline"><b>Dr. Md Zahid Hasan</b> — Associate Professor — Daffodil International University — Email: <a href="mailto:zahid.cse@diu.edu.bd">zahid.cse@diu.edu.bd</a></p>
     </section>
 
     <hr/>
