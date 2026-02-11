@@ -34,80 +34,32 @@
     }
     .stack a{color:var(--link);text-decoration:underline}
 
-    /* LOGO ROW (NO IMAGES NEEDED) */
-    .logobar.logos{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:18px;
-      margin:14px 0 8px;
-      flex-wrap:wrap;
-    }
-    .logoLink{ text-decoration:none; display:flex; align-items:center; gap:10px; }
+    /* LOGO ROW */
+.logobar.logos{
+  gap:12px;          /* gap কম */
+  margin:10px 0 6px; /* margin কম */
+}
 
-    .logoBox{
-      width:72px;
-      height:72px;
-      border-radius:10px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:900;
-      box-shadow:0 6px 18px rgba(0,0,0,.10);
-    }
+/* Icon blocks ছোট */
+.logoBox{
+  width:52px;
+  height:52px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
 
-    /* Google Scholar-like block */
-    .gs{
-      background:#6d8ff5;
-      flex-direction:column;
-      color:#fff;
-      padding:8px 0;
-      gap:4px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .gs-top,.gs-bot{ font-size:14px; font-weight:800; line-height:1; }
-    .gs-icon{
-      width:34px;height:34px;border-radius:50%;
-      background:#fff;color:#6d8ff5;
-      display:flex;align-items:center;justify-content:center;
-      font-size:22px; font-weight:900;
-      line-height:1;
-    }
+/* Google Scholar block text ছোট */
+.gs-top,.gs-bot{ font-size:11px; }
+.gs-icon{ width:24px; height:24px; font-size:16px; }
 
-    /* LinkedIn block */
-    .in{
-      background:#0A66C2;
-      color:#fff;
-      font-size:36px;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height:1;
-    }
+/* LinkedIn / RG letter ছোট */
+.in{ font-size:26px; }
+.rg{ font-size:24px; }
+.rg-text{ font-size:18px; }  /* “ResearchGate” text ছোট */
 
-    /* ResearchGate */
-    .rg{
-      background:#00CCBB;
-      color:#fff;
-      font-size:34px;
-      font-family: "Times New Roman", Times, serif;
-      line-height:1;
-    }
-    .rg-r{ margin-right:2px; }
-    .rg-text{
-      color:#00CCBB;
-      font-weight:800;
-      font-size:22px;
-      font-family:"Times New Roman", Times, serif;
-      line-height:1;
-    }
+/* Gmail ছোট */
+.gmailText{ font-size:44px; }
 
-    /* Gmail text (big like screenshot) */
-    .gmailText{
-      font-size:64px;
-      font-weight:900;
-      font-family: Arial, Helvetica, sans-serif;
-      letter-spacing:1px;
-      line-height:1;
-    }
     .gB{ color:#4285F4; }
     .gR{ color:#EA4335; }
     .gY{ color:#FBBC05; }
